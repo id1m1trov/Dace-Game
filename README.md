@@ -1,2 +1,2 @@
 # Dace-Game
-Dace game made by javaScript
+Dace game made with javaScript
