@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Aclonica|Boogaloo" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- Welcome box -->
+    <h1 class="text-center" id="mainHeader">Roll The Dice</h1>
+
+    <div class="row text-center " id="inputRow">
+
+
+        <div class="col-4">
+            <label for="playerOneNameGet">Player One Name</label>
+            <input type="text" class=" mt-2" id="playerOneNameGet" placeholder="name" required>
+        </div>
+        <div class="col-4">
+            <p>Select number of Rolls</p>
+            <label for="threeGames" class="radioLabel"><span>&nbsp;</span>3 rolls<span>&nbsp;&nbsp;</span><span
+                    class="checkmark"></span></label>
+            <input type="radio" name="numberOfGames" value="3" id="threeGames" checked="checked"><br>
+            <label for="fiveGames" class="radioLabel"><span>&nbsp;</span>5 rolls<span>&nbsp;&nbsp;</span><span
+                    class="checkmark"></span></label>
+            <input type="radio" name="numberOfGames" value="5" id="fiveGames"><br>
+            <label for="tenGames" class="radioLabel">10 rolls<span>&nbsp;</span><span class="checkmark"></span></label>
+            <input type="radio" name="numberOfGames" value="10" id="tenGames"><br>
+        </div>
+        <div class="col-4">
+            <label for="playerTwoNameGet">Player Two Name</label>
+            <input type="text" class="mt-2" id="playerTwoNameGet" placeholder="name" required>
+        </div>
+        <button class="btn mx-auto d-block my-4" id="playBtn">Play</button>
+
+    </div>
+
+    <!-- Play box -->
+    <div class="row text-center d-flex justify-content-center" id="playRow">
+        <div class="col-4" id="playerOneStats">
+            <h2 id="playerOneNameSet">Player One</h2>
+            <ul>
+
+            </ul>
+            <p class="d-flex align-items-center justify-content-center totalOne"><i>total:</i><span id="totalOne">0</span></p>
+        </div>
+        <div class="col-4 my-5">
+            <!-- <canvas id="diceOne" class="dices"></canvas> -->
+            <canvas id="diceOne" width="290" height="300">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+        </div>
+        <div class="col-4" id="playerTwoStats">
+            <h2 id="playerTwoNameSet">Player Two</h2>
+            <ul>
+
+            </ul>
+            <p class="d-flex align-items-center justify-content-center totalTwo"><i>total:</i><span  id="totalTwo">0</span></p>
+        </div>
+        <div class="col-12 mt-n5">
+            <p id="playersTurn" class="mt-n5"><span></span>`s turn</p>
+            <button class="btn btn-success mt-n2" id="trollBtn">Troll the dices</button>
+        </div>
+    </div>
+
+    <!-- win dialog -->
+
+    <div id="winDialog">
+        <!-- confetti -->
+        <div id="confetti"></div>
+        <!-- win box -->
+        <div id="small-winDialog" class="small-winDialog">
+                <img src="images/trophy.png" alt="bg-tropy-img" id="bgTropyImg">
+                <h3>WINNER</h3>
+
+                <p id="winnerName">player 1</p>
+
+                <p id="winnerScore">win with <spam id="points"></spam> points more</p>
+                
+                <button type="button" class="btn btn-outline-light" id="playAgainBtn" onclick='document.location.reload()'>Play Again</button>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
