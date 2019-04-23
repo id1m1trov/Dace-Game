@@ -1,2 +1,2 @@
 # Dace-Game
-Dace game made with javaScript
+Simple dice game made with javaScript
